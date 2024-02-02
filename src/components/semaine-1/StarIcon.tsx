@@ -60,6 +60,7 @@ const StarIcon = (props: IStarIconProps) => {
         }
         fill={select ? "#df41b3" : "#7b61ff"}
         fillOpacity={hover || select ? 1 : 0}
+        className={select ? "" : "hover:scale-110 transition-all duration-200 ease-in-out"}
       />
     </div>
   );

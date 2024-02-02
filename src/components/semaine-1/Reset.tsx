@@ -38,7 +38,7 @@ const Reset = () => {
       <div
         className={`p-2 ${
           selectedStarNumber !== 0
-            ? "hover:bg-gray-100 cursor-pointer"
+            ? "hover:bg-gray-100 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer"
             : "cursor-not-allowed"
         } rounded`}
         onMouseEnter={() => handleMouseEnter()}

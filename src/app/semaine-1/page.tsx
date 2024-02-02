@@ -1,3 +1,4 @@
+import GoHomeButton from "@/components/GoHomeButton";
 import Modal from "@/components/semaine-1/Modal";
 import backgroundImage from "../../assets/semaine-1/background.png";
 
@@ -9,7 +10,8 @@ const Page = () => {
         backgroundImage: `url(${backgroundImage.src})`,
       }}
     >
-      <Modal/>
+      <GoHomeButton />
+      <Modal />
     </div>
   );
 };
