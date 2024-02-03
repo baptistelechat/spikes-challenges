@@ -1,7 +1,7 @@
 import GradientHeading from "@/components/GradientHeading";
 import Link from "next/link";
 
-export default function Home() {
+const Page = () => {
   const currentWeek = 1; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
 
   // Générer les liens et titres dynamiquement
@@ -12,29 +12,31 @@ export default function Home() {
   }));
 
   return (
-    <main className="w-screen h-screen flex flex-col items-center justify-center gap-2 backdrop-blur bg-blue-100">
+    <main className="flex h-screen w-screen flex-col items-center justify-center gap-2 bg-blue-100 backdrop-blur">
       <GradientHeading
         heading={1}
         title="Challenge web"
         from="from-sky-400"
         to="to-indigo-700"
       />
-      <div className="w-1/2 flex flex-wrap justify-center gap-2">
-        {links.map((link, index) => (
+      <div className="flex w-1/2 flex-wrap justify-center gap-2">
+        {links.map((link) => (
           <Link
-            key={index}
-            href={!link.disabled ? link.href : ""}
-            className={`w-fit p-3 rounded ${
+            key={link.href.replace("/", "")}
+            href={!link.disabled ? link.href : "/"}
+            className={`w-fit rounded p-3 ${
               !link.disabled
-                ? "bg-sky-300 hover:underline hover:text-white hover:-rotate-6 hover:scale-105 transition-all duration-300 ease-in-out"
-                : "bg-gray-100 cursor-not-allowed"
+                ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
+                : "cursor-not-allowed bg-gray-100"
             } `}
           >
             {link.text}
           </Link>
         ))}
       </div>
-      <p className="w-full italic p-2 text-center">Baptiste LECHAT</p>
+      <p className="w-full p-2 text-center italic">Baptiste LECHAT</p>
     </main>
   );
-}
+};
+
+export default Page;

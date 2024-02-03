@@ -8,10 +8,10 @@ const Reset = () => {
   const [iconColor, setIconColor] = useState("#828282");
 
   const selectedStarNumber = useStarInteractionStore(
-    (s) => s.selectedStarNumber
+    (s) => s.selectedStarNumber,
   );
   const resetStartInteraction = useStarInteractionStore(
-    (s) => s.resetStarInteraction
+    (s) => s.resetStarInteraction,
   );
 
   const handleMouseEnter = () => {
@@ -25,7 +25,7 @@ const Reset = () => {
       setIconColor("#828282");
     }
   };
-  
+
   const handleClick = () => {
     if (selectedStarNumber !== 0) {
       resetStartInteraction();
@@ -33,17 +33,27 @@ const Reset = () => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
-    <div className="w-full flex justify-end">
+    <div className="flex w-full justify-end">
       <div
         className={`p-2 ${
           selectedStarNumber !== 0
-            ? "hover:bg-gray-100 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer"
+            ? "cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 hover:bg-gray-100"
             : "cursor-not-allowed"
         } rounded`}
         onMouseEnter={() => handleMouseEnter()}
         onMouseLeave={() => handleMouseLeave()}
         onClick={() => handleClick()}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+        aria-label="Réinitialisation"
       >
         <Repeat size={24} color={iconColor} />
       </div>

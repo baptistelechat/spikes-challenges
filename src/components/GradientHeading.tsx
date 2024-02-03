@@ -9,7 +9,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 1) {
     return (
       <h1
-        className={`font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-8xl font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -21,7 +21,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 2) {
     return (
       <h2
-        className={`font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-6xl font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -33,7 +33,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 3) {
     return (
       <h3
-        className={`font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-4xl font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -45,7 +45,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 4) {
     return (
       <h4
-        className={`font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-2xl font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -57,7 +57,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 5) {
     return (
       <h5
-        className={`font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-xl font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -69,7 +69,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
   if (heading === 6) {
     return (
       <h6
-        className={`font-extrabold text-transparent text-lg bg-clip-text bg-gradient-to-r ${
+        className={`bg-gradient-to-r bg-clip-text text-lg font-extrabold text-transparent ${
           from ?? "from-pink-300"
         } ${to ?? "to-pink-700"}`}
       >
@@ -80,7 +80,7 @@ const GradientHeading = ({ title, from, to, heading }: IGradientHeading) => {
 
   return (
     <h1
-      className={`font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r ${
+      className={`bg-gradient-to-r bg-clip-text text-8xl font-extrabold text-transparent ${
         from ?? "from-pink-300"
       } ${to ?? "to-pink-700"}`}
     >

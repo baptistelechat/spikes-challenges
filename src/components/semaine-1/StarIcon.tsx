@@ -11,18 +11,30 @@ const StarIcon = (props: IStarIconProps) => {
   // Hovered star
   const hoveredStarNumber = useStarInteractionStore((s) => s.hoveredStarNumber);
   const setHoveredStarNumber = useStarInteractionStore(
-    (s) => s.setHoveredStarNumber
+    (s) => s.setHoveredStarNumber,
   );
   const selectedStarNumber = useStarInteractionStore(
-    (s) => s.selectedStarNumber
+    (s) => s.selectedStarNumber,
   );
   // Selected star
   const setSelectedStarNumber = useStarInteractionStore(
-    (s) => s.setSelectedStarNumber
+    (s) => s.setSelectedStarNumber,
   );
 
   const hover = props.index <= hoveredStarNumber;
   const select = props.index <= selectedStarNumber;
+
+  const starColor = () => {
+    if (select) {
+      return "#df41b3";
+    }
+
+    if (selectedStarNumber !== 0) {
+      return "#e8e8e8";
+    }
+
+    return "#7b61ff";
+  };
 
   const handleMouseEnter = () => {
     if (selectedStarNumber === 0) {
@@ -43,24 +55,43 @@ const StarIcon = (props: IStarIconProps) => {
     }
   };
 
+  const handleFocus = () => {
+    if (selectedStarNumber === 0) {
+      setHoveredStarNumber(props.index);
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
     <div
-      className={`w-12 h-12 flex items-center justify-center rounded-full ${
+      className={`flex size-12 items-center justify-center rounded-full ${
         props.index === hoveredStarNumber ? "bg-primary-100" : ""
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
+      onFocus={handleFocus}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`Étoile ${props.index + 1}`}
     >
       <Star
         size={32}
         strokeWidth={1.5}
-        color={
-          select ? "#df41b3" : selectedStarNumber !== 0 ? "#e8e8e8" : "#7b61ff"
-        }
+        color={starColor()}
         fill={select ? "#df41b3" : "#7b61ff"}
         fillOpacity={hover || select ? 1 : 0}
-        className={select ? "" : "hover:scale-110 transition-all duration-200 ease-in-out"}
+        className={
+          select
+            ? ""
+            : "transition-all duration-200 ease-in-out hover:scale-110"
+        }
       />
     </div>
   );

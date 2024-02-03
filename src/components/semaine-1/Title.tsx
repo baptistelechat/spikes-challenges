@@ -2,8 +2,8 @@ interface ITitleProps {
   content: string;
 }
 
-const Title = (props: ITitleProps) => {
-  return <h1 className="text-2xl text-center font-semibold">{props.content}</h1>;
-};
+const Title = (props: ITitleProps) => (
+  <h1 className="text-center text-2xl font-semibold">{props.content}</h1>
+);
 
 export default Title;
