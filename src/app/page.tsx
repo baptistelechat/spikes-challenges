@@ -1,7 +1,5 @@
-"use client";
-
 import GradientHeading from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Page = () => {
   const currentWeek = 3; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
@@ -25,31 +23,18 @@ const Page = () => {
         to="to-indigo-700"
       />
       <div className="flex w-1/2 flex-wrap justify-center gap-2">
-        {links.map((link, index) => (
-          // <Link
-          //   key={link.href.replace("/", "")}
-          //   href={!link.disabled ? link.href : "/"}
-          //   className={`w-fit rounded p-3 ${
-          //     !link.disabled
-          //       ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
-          //       : "cursor-not-allowed bg-gray-100"
-          //   } `}
-          // >
-          //   {link.text}
-          // </Link>
-          <Button
+        {links.map((link) => (
+          <Link
             key={link.href.replace("/", "")}
-            onClick={() =>
-              index + 1 === 2
-                ? window.open(link.href, "_blank")
-                : !link.disabled
-                  ? window.location.assign(link.href)
-                  : null
-            }
-            variant={!link.disabled ? "default" : "secondary"}
+            href={!link.disabled ? link.href : "/"}
+            className={`w-fit rounded p-3 ${
+              !link.disabled
+                ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
+                : "cursor-not-allowed bg-gray-100"
+            } `}
           >
             {link.text}
-          </Button>
+          </Link>
         ))}
       </div>
       <p className="w-full p-2 text-center italic">Baptiste LECHAT</p>
