@@ -2,11 +2,14 @@ import GradientHeading from "@/components/GradientHeading";
 import Link from "next/link";
 
 const Page = () => {
-  const currentWeek = 1; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
+  const currentWeek = 2; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
 
   // Générer les liens et titres dynamiquement
   const links = Array.from({ length: currentWeek + 3 }, (_, index) => ({
-    href: `/semaine-${index + 1}`,
+    href:
+      index + 1 === 2
+        ? "https://baptistelechat.vercel.app/"
+        : `/semaine-${index + 1}`,
     text: `Semaine ${index + 1}`,
     disabled: index + 1 > currentWeek,
   }));
