@@ -1,8 +1,10 @@
+"use client";
+
 import GradientHeading from "@/components/GradientHeading";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Page = () => {
-  const currentWeek = 2; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
+  const currentWeek = 3; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
 
   // Générer les liens et titres dynamiquement
   const links = Array.from({ length: currentWeek + 3 }, (_, index) => ({
@@ -23,18 +25,31 @@ const Page = () => {
         to="to-indigo-700"
       />
       <div className="flex w-1/2 flex-wrap justify-center gap-2">
-        {links.map((link) => (
-          <Link
+        {links.map((link, index) => (
+          // <Link
+          //   key={link.href.replace("/", "")}
+          //   href={!link.disabled ? link.href : "/"}
+          //   className={`w-fit rounded p-3 ${
+          //     !link.disabled
+          //       ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
+          //       : "cursor-not-allowed bg-gray-100"
+          //   } `}
+          // >
+          //   {link.text}
+          // </Link>
+          <Button
             key={link.href.replace("/", "")}
-            href={!link.disabled ? link.href : "/"}
-            className={`w-fit rounded p-3 ${
-              !link.disabled
-                ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
-                : "cursor-not-allowed bg-gray-100"
-            } `}
+            onClick={() =>
+              index + 1 === 2
+                ? window.open(link.href, "_blank")
+                : !link.disabled
+                  ? window.location.assign(link.href)
+                  : null
+            }
+            variant={!link.disabled ? "default" : "secondary"}
           >
             {link.text}
-          </Link>
+          </Button>
         ))}
       </div>
       <p className="w-full p-2 text-center italic">Baptiste LECHAT</p>
