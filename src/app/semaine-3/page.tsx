@@ -1,5 +1,6 @@
 import GoHomeButton from "@/components/GoHomeButton";
 import Features from "@/components/semaine-3/Features";
+import Footer from "@/components/semaine-3/Footer";
 import Header from "@/components/semaine-3/Header";
 import Menu from "@/components/semaine-3/Menu";
 import Sponsor from "@/components/semaine-3/Sponsor";
@@ -16,7 +17,7 @@ const Page = () => (
     <Header />
     <Sponsor />
     <Features />
-    <div>footer</div>
+    <Footer />
     <GoHomeButton />
   </main>
 );
