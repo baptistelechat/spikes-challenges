@@ -1,4 +1,5 @@
 import GoHomeButton from "@/components/GoHomeButton";
+import Features from "@/components/semaine-3/Features";
 import Header from "@/components/semaine-3/Header";
 import Menu from "@/components/semaine-3/Menu";
 import Sponsor from "@/components/semaine-3/Sponsor";
@@ -10,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const Page = () => (
-  <main className="flex size-full flex-col items-center gap-8 bg-gradient-to-b from-indigo-700 via-indigo-800 via-25% to-indigo-900 p-6 text-white">
+  <main className="flex size-full flex-col items-center gap-8 bg-gradient-to-b from-indigo-900  to-[#0B0121] to-40% p-6 text-white">
     <Menu />
     <Header />
     <Sponsor />
-    <div>features</div>
+    <Features />
     <div>footer</div>
     <GoHomeButton />
   </main>

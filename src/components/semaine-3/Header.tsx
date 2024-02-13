@@ -11,7 +11,7 @@ const Header = () => (
       Modern analytics <br />
       for the modern world
     </p>
-    <p className="w-1/2 text-center text-lg text-white/65">
+    <p className="w-1/2 text-center text-lg font-thin text-white/65">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique.
     </p>
@@ -19,7 +19,7 @@ const Header = () => (
       <Button variant="secondary" className="rounded-full">
         Download the app
       </Button>
-      <Button className="rounded-full border bg-transparent">
+      <Button className="w-fit rounded-full border bg-transparent">
         Talk to an expert
       </Button>
     </div>
