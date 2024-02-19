@@ -2,7 +2,7 @@
 
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const AddToCart = () => {
   const [article, setArticle] = useState(1);

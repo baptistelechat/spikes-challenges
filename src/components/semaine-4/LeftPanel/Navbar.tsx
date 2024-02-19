@@ -1,5 +1,5 @@
 import { ListFilter, Search, ShoppingCart } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const Navbar = () => {
   const pages = ["Shop", "Collective", "Designers", "About Us", "Contact"];
