@@ -8,7 +8,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Challenge Web | Semaine 3",
-  description: "Challenge web of first week",
+  description: "Challenge web of third week",
 };
 
 const Page = () => (

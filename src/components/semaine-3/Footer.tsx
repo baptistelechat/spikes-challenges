@@ -36,7 +36,7 @@ const Footer = () => (
       </div>
       <div className="flex w-full items-center justify-end gap-2">
         <Image src={Logo} alt="Logo" width={24} height={24} />
-        <p className="text-bold">Vaultflow</p>
+        <p>Vaultflow</p>
       </div>
     </div>
   </div>
