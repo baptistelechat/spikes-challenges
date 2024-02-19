@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className="flex h-20 w-full items-center justify-between border-b border-zinc-300 px-10 py-6">
-      <p className="text-lg font-extrabold">Cozy®</p>
+      <p className="text-2xl font-extrabold">Cozy®</p>
       <div className="flex gap-4 ">
         {pages.map((page) => (
           <Button key={page} variant="link" className="font-semibold">
