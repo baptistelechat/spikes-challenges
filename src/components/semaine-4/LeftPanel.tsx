@@ -1,13 +1,13 @@
 import { MoveLeft } from "lucide-react";
 import { Button } from "../ui/button";
-import Ariane from "./LeftPanel/Ariane";
-import Title from "./LeftPanel/Title";
-import Amount from "./LeftPanel/Amount";
-import Review from "./LeftPanel/Review";
-import Color from "./LeftPanel/Color";
 import AddToCart from "./LeftPanel/AddToCart";
 import AddToWishlist from "./LeftPanel/AddToWishlist";
+import Amount from "./LeftPanel/Amount";
+import Ariane from "./LeftPanel/Ariane";
+import Color from "./LeftPanel/Color";
+import Review from "./LeftPanel/Review";
 import Social from "./LeftPanel/Social";
+import Title from "./LeftPanel/Title";
 
 const LeftPanel = () => {
   return (
@@ -32,9 +32,11 @@ const LeftPanel = () => {
         </p>
         <Color />
       </div>
-      <AddToCart />
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-8">
+        <AddToCart />
         <p>Free 3-5 day shipping • Tool-free assembly • 30-day trial</p>
+      </div>
+      <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <AddToWishlist />
           <Social />

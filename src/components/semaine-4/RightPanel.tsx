@@ -33,7 +33,7 @@ const RightPanel = () => {
 
   return (
     <div className="flex w-1/2 flex-col justify-between p-12">
-      <div className="flex w-full justify-end">
+      <div className="flex w-full flex-col items-end">
         <div className="flex gap-2">
           <p className="text-3xl font-bold">
             {String(imageIndex + 1).padStart(2, "0")}
@@ -41,7 +41,7 @@ const RightPanel = () => {
           <p className="flex items-end text-3xl font-bold text-zinc-400">/</p>
           <p className="flex items-end text-3xl font-bold text-zinc-400">05</p>
         </div>
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex items-center gap-5">
           <Button
             variant="outline"
             size="icon"
