@@ -1,11 +1,22 @@
 "use client";
-
+import { motion, Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import Image1 from "../../assets/semaine-4/01.jpeg";
 import { Button } from "../ui/button";
 import ImageSelect from "./RightPanel/ImageSelect";
+
+const controlVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
 
 const RightPanel = () => {
   const [imageIndex, setImageIndex] = useState<number>(0);
@@ -33,7 +44,12 @@ const RightPanel = () => {
 
   return (
     <div className="flex w-1/2 flex-col justify-between p-12">
-      <div className="flex w-full flex-col items-end">
+      <motion.div
+        className="flex w-full flex-col items-end"
+        variants={controlVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="flex gap-2">
           <p className="text-3xl font-bold">
             {String(imageIndex + 1).padStart(2, "0")}
@@ -59,8 +75,9 @@ const RightPanel = () => {
             <ChevronRight className="size-6" />
           </Button>
         </div>
-      </div>
-      <Image src={image} alt={"Image"} layout="responsive" unoptimized />
+      </motion.div>
+
+      <Image src={image} alt={"Image"} width={500} height={500} unoptimized />
       <ImageSelect
         imageIndex={imageIndex}
         setImageIndex={setImageIndex}

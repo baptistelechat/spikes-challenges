@@ -1,5 +1,6 @@
 "use client";
 
+import { Variants, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import Image1 from "../../../assets/semaine-4/01.jpeg";
@@ -7,12 +8,22 @@ import Image2 from "../../../assets/semaine-4/02.jpeg";
 import Image3 from "../../../assets/semaine-4/03.jpeg";
 import Image4 from "../../../assets/semaine-4/04.jpeg";
 import Image5 from "../../../assets/semaine-4/05.png";
-
 interface IImageSelectProps {
   imageIndex: number;
   setImageIndex: Dispatch<SetStateAction<number>>;
   setImage: Dispatch<SetStateAction<StaticImageData>>;
 }
+
+const imageSelectVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const ImageSelect = (props: IImageSelectProps) => {
   const images = [Image1, Image2, Image3, Image4, Image5];
@@ -41,7 +52,12 @@ const ImageSelect = (props: IImageSelectProps) => {
   }, [props]);
 
   return (
-    <div className="flex h-24 gap-2">
+    <motion.div
+      className="flex h-24 gap-2"
+      variants={imageSelectVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {images.map((image: StaticImageData, index: number) => (
         <Image
           key={`image-${index}`}
@@ -54,7 +70,7 @@ const ImageSelect = (props: IImageSelectProps) => {
           unoptimized
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

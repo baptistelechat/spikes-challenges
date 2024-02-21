@@ -1,6 +1,6 @@
 import GoHomeButton from "@/components/GoHomeButton";
 import LeftPanel from "@/components/semaine-4/LeftPanel";
-import Navbar from "@/components/semaine-4/LeftPanel/Navbar";
+import Navbar from "@/components/semaine-4/NavBar/Navbar";
 import RightPanel from "@/components/semaine-4/RightPanel";
 import { Metadata } from "next";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => (
-  <div className="flex h-screen flex-col">
+  <div className="flex h-screen flex-col overflow-hidden">
     <Navbar />
     <div className="flex grow">
       <LeftPanel />
