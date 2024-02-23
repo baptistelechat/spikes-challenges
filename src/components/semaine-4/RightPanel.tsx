@@ -1,5 +1,5 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
@@ -18,11 +18,30 @@ const controlVariants: Variants = {
   },
 };
 
+const imageVariants: Variants = {
+  hidden: (direction: string) => ({
+    opacity: 0,
+    x: direction === "left" ? -100 : 100,
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 const RightPanel = () => {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const [image, setImage] = useState<StaticImageData>(Image1);
+  const [direction, setDirection] = useState<"left" | "right">("left");
 
   const handleLeftImage = () => {
+    setDirection("left");
     if (imageIndex > 0) {
       setImageIndex(imageIndex - 1);
     }
@@ -33,6 +52,7 @@ const RightPanel = () => {
   };
 
   const handleRightImage = () => {
+    setDirection("right");
     if (imageIndex < 4) {
       setImageIndex(imageIndex + 1);
     }
@@ -76,8 +96,18 @@ const RightPanel = () => {
           </Button>
         </div>
       </motion.div>
-
-      <Image src={image} alt={"Image"} layout="responsive" unoptimized />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={imageIndex}
+          custom={direction}
+          variants={imageVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <Image src={image} alt={"Image"} className="w-full" unoptimized />
+        </motion.div>
+      </AnimatePresence>
       <ImageSelect
         imageIndex={imageIndex}
         setImageIndex={setImageIndex}

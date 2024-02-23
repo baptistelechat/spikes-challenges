@@ -53,7 +53,7 @@ const ImageSelect = (props: IImageSelectProps) => {
 
   return (
     <motion.div
-      className="flex h-24 gap-2"
+      className="flex h-24 w-full justify-center gap-2"
       variants={imageSelectVariants}
       initial="hidden"
       animate="visible"

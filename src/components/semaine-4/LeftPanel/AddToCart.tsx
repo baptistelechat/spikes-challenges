@@ -1,19 +1,26 @@
 "use client";
 
+import useCartStore from "@/lib/store/semaine-4/cartStore";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../../ui/button";
 
 const AddToCart = () => {
   const [article, setArticle] = useState(1);
+  const cart = useCartStore((s) => s.cart);
+  const setCart = useCartStore((s) => s.setCart);
 
   const handleAddArticle = () => {
     setArticle(article + 1);
   };
   const handleRemoveArticle = () => {
     if (article > 1) {
-      setArticle(article - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    setCart(cart + article);
+    setArticle(1);
   };
 
   return (
@@ -39,7 +46,10 @@ const AddToCart = () => {
           <Plus className="size-6" />
         </Button>
       </div>
-      <div className="flex h-12 items-center justify-center rounded bg-teal-600 px-10 py-4">
+      <div
+        className="flex h-12 items-center justify-center rounded bg-teal-600 px-10 py-4"
+        onClick={handleAddToCart}
+      >
         <p className="font-semibold text-white">Add to Cart</p>
       </div>
     </div>
