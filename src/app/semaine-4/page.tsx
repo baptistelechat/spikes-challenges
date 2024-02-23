@@ -2,6 +2,7 @@ import GoHomeButton from "@/components/GoHomeButton";
 import LeftPanel from "@/components/semaine-4/LeftPanel";
 import Navbar from "@/components/semaine-4/NavBar/Navbar";
 import RightPanel from "@/components/semaine-4/RightPanel";
+import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ const Page = () => (
       <LeftPanel />
       <RightPanel />
     </div>
+    <Toaster position="bottom-center" />
     <GoHomeButton theme="dark" />
   </div>
 );

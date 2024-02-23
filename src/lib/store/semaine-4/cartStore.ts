@@ -3,7 +3,7 @@ import { create } from "zustand";
 type StarInteractionStoreType = {
   cart: number;
   setCart: (newCart: number) => void;
-  resetCart: (newCart: number) => void;
+  resetCart: () => void;
 };
 
 const useCartStore = create<StarInteractionStoreType>((set) => ({

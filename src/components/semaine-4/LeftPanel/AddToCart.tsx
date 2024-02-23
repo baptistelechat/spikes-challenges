@@ -3,6 +3,7 @@
 import useCartStore from "@/lib/store/semaine-4/cartStore";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "../../ui/button";
 
 const AddToCart = () => {
@@ -21,6 +22,9 @@ const AddToCart = () => {
   const handleAddToCart = () => {
     setCart(cart + article);
     setArticle(1);
+    toast("New article add to your shopping cart", {
+      description: `Meryl Lounge Chair : ${article} x $149.99 = $${(article * 149.99).toFixed(2)}`,
+    });
   };
 
   return (
