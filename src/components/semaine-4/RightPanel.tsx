@@ -77,7 +77,7 @@ const RightPanel = () => {
         </div>
       </motion.div>
 
-      <Image src={image} alt={"Image"} width={500} height={500} unoptimized />
+      <Image src={image} alt={"Image"} layout="responsive" unoptimized />
       <ImageSelect
         imageIndex={imageIndex}
         setImageIndex={setImageIndex}

@@ -1,7 +1,23 @@
+import { MotionBadge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { Variants } from "framer-motion";
 import { ListFilter, Search, ShoppingCart } from "lucide-react";
 import Logo from "./components/Logo";
 import PagesLink from "./components/PagesLink";
-import { Button } from "@/components/ui/button";
+
+const badgeVariants: Variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 const Navbar = () => {
   return (
@@ -18,9 +34,30 @@ const Navbar = () => {
           </Button>
         </div>
         <div className="h-20 border-l border-zinc-300"></div>
-        <Button variant="outline" size="icon" className="border-transparent">
-          <ShoppingCart className="size-6" />
-        </Button>
+        <HoverCard>
+          <HoverCardTrigger>
+            <div className="flex flex-col items-center gap-1">
+              <Button
+                variant="outline"
+                size="icon"
+                className="border-transparent"
+              >
+                <ShoppingCart className="size-6" />
+              </Button>
+              <MotionBadge
+                className="w-fit"
+                variants={badgeVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                1
+              </MotionBadge>
+            </div>
+          </HoverCardTrigger>
+          <HoverCardContent>
+            The React Framework – created and maintained by @vercel.
+          </HoverCardContent>
+        </HoverCard>
       </div>
     </div>
   );
