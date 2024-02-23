@@ -1,5 +1,5 @@
 "use client";
-
+import useThemeStore from "@/lib/store/semaine-4/themeStore";
 import { Variants, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { Dispatch, SetStateAction, useEffect } from "react";
@@ -26,6 +26,7 @@ const imageSelectVariants: Variants = {
 };
 
 const ImageSelect = (props: IImageSelectProps) => {
+  const theme = useThemeStore((s) => s.theme);
   const images = [Image1, Image2, Image3, Image4, Image5];
 
   const handleClick = (index: number, image: StaticImageData) => {
@@ -65,7 +66,10 @@ const ImageSelect = (props: IImageSelectProps) => {
           alt={`image-${index}`}
           width={96}
           height={96}
-          className={`rounded border-2 ${props.imageIndex === index ? "border-teal-600" : "border-zinc-300 hover:cursor-pointer"} object-cover transition-all duration-200 ease-in-out`}
+          className={`rounded border-2 ${props.imageIndex !== index ? "hover:cursor-pointer" : ""} object-cover transition-all duration-200 ease-in-out`}
+          style={{
+            borderColor: props.imageIndex === index ? theme : "#e4e4e7",
+          }}
           onClick={() => handleClick(index, image)}
           unoptimized
         />

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Separator } from "@/components/ui/separator";
 import useCartStore from "@/lib/store/semaine-4/cartStore";
+import useThemeStore from "@/lib/store/semaine-4/themeStore";
 import { Variants, motion } from "framer-motion";
 import { PackageCheck, PackageX, ShoppingCart, Trash } from "lucide-react";
 import Image from "next/image";
@@ -30,6 +31,8 @@ const cartVariants: Variants = {
 const Cart = () => {
   const cart = useCartStore((s) => s.cart);
   const resetCart = useCartStore((s) => s.resetCart);
+
+  const theme = useThemeStore((s) => s.theme);
 
   return (
     <HoverCard>
@@ -67,7 +70,10 @@ const Cart = () => {
                 alt={"Chair"}
                 width={150}
                 height={150}
-                className={"rounded border-2 border-teal-600 object-cover"}
+                className={"rounded border-2 object-cover"}
+                style={{
+                  borderColor: theme
+                }}
                 unoptimized
               />
               <div className="flex flex-col gap-2 ">
@@ -82,7 +88,12 @@ const Cart = () => {
                   <p className="font-semibold">${(cart * 149.99).toFixed(2)}</p>
                 </div>
               </div>
-              <div className="flex h-12 items-center justify-center gap-2 rounded bg-teal-600 px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer">
+              <div
+                className="flex h-12 items-center justify-center gap-2 rounded  px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
+                style={{
+                  backgroundColor: theme,
+                }}
+              >
                 <PackageCheck className="size-6" color="white" />
                 <p className="font-semibold text-white">Buy now</p>
               </div>

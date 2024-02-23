@@ -1,6 +1,7 @@
 "use client";
 
 import useCartStore from "@/lib/store/semaine-4/cartStore";
+import useThemeStore from "@/lib/store/semaine-4/themeStore";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -10,6 +11,8 @@ const AddToCart = () => {
   const [article, setArticle] = useState(1);
   const cart = useCartStore((s) => s.cart);
   const setCart = useCartStore((s) => s.setCart);
+
+  const theme = useThemeStore((s) => s.theme);
 
   const handleAddArticle = () => {
     setArticle(article + 1);
@@ -51,7 +54,10 @@ const AddToCart = () => {
         </Button>
       </div>
       <div
-        className="flex h-12 items-center justify-center rounded bg-teal-600 px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
+        className="flex h-12 items-center justify-center rounded px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
+        style={{
+          backgroundColor: theme,
+        }}
         onClick={handleAddToCart}
       >
         <p className="font-semibold text-white">Add to Cart</p>
