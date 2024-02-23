@@ -25,7 +25,7 @@ const AddToCart = () => {
 
   return (
     <div className="flex gap-6">
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex h-12 items-center justify-center gap-10 rounded border border-zinc-300 px-1">
         <Button
           variant="outline"
           size="icon"
@@ -47,7 +47,7 @@ const AddToCart = () => {
         </Button>
       </div>
       <div
-        className="flex h-12 items-center justify-center rounded bg-teal-600 px-10 py-4"
+        className="flex h-12 items-center justify-center rounded bg-teal-600 px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
         onClick={handleAddToCart}
       >
         <p className="font-semibold text-white">Add to Cart</p>

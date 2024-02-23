@@ -1,6 +1,5 @@
 "use client";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion } from "framer-motion";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -43,6 +42,4 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
 
 Badge.displayName = "Badge";
 
-const MotionBadge = motion(Badge);
-
-export { Badge, badgeVariants, MotionBadge };
+export { Badge, badgeVariants };
