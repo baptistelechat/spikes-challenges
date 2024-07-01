@@ -3,8 +3,8 @@ import FeaturesImage from "../../assets/ton-premier-saas/features.png";
 import Icon1 from "../../assets/ton-premier-saas/icon-1.png";
 import Icon2 from "../../assets/ton-premier-saas/icon-2.png";
 import Icon3 from "../../assets/ton-premier-saas/icon-3.png";
-import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
+import { Button } from "../../ui/button";
+import { Card, CardContent } from "../../ui/card";
 
 const Features = () => (
   <div className="flex w-3/4 flex-col items-center gap-20">

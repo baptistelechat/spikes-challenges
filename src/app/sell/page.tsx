@@ -1,5 +1,7 @@
 import GoHomeButton from "@/components/GoHomeButton";
-import Header from "@/components/sell/Header";
+import CTA from "@/components/projects/sell/sections/CTA";
+import Header from "@/components/projects/sell/sections/Header";
+import { dmSans } from "@/lib/constants/fonts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,9 +10,12 @@ export const metadata: Metadata = {
 };
 
 const Page = () => (
-  <div className="flex h-screen flex-col items-center bg-slate-200 p-6">
-    <div className="w-1/4">
+  <div
+    className={`${dmSans.className} flex h-screen flex-col items-center bg-neutral-50 p-6`}
+  >
+    <div className="flex w-1/2 flex-col items-center">
       <Header />
+      <CTA />
     </div>
     <GoHomeButton />
   </div>

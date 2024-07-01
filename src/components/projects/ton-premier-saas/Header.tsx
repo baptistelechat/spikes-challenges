@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HeaderImg from "../../assets/ton-premier-saas/header.png";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const Header = () => (
   <div className="flex w-3/4 flex-col items-center gap-6">
