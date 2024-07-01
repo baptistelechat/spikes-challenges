@@ -1,5 +1,6 @@
 import GoHomeButton from "@/components/GoHomeButton";
 import CTA from "@/components/projects/sell/sections/CTA";
+import Footer from "@/components/projects/sell/sections/Footer";
 import Header from "@/components/projects/sell/sections/Header";
 import Hero from "@/components/projects/sell/sections/Hero";
 import { dmSans } from "@/lib/constants/fonts";
@@ -18,6 +19,7 @@ const Page = () => (
       <Header />
       <Hero />
       <CTA />
+      <Footer />
     </div>
     <GoHomeButton />
   </div>
