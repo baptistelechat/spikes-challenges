@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../assets/semaine-2/logo.png";
+import Logo from "../../assets/ton-premier-saas/logo.png";
 
 const Footer = () => (
   <div className="flex w-3/4">

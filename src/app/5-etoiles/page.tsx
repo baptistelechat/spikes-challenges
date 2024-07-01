@@ -1,7 +1,7 @@
 import GoHomeButton from "@/components/GoHomeButton";
-import Modal from "@/components/semaine-1/Modal";
+import Modal from "@/components/5-etoiles/Modal";
 import { Metadata } from "next";
-import backgroundImage from "../../assets/semaine-1/background.png";
+import backgroundImage from "../../assets/5-etoiles/background.png";
 
 export const metadata: Metadata = {
   title: "Challenge Web | Semaine 1",

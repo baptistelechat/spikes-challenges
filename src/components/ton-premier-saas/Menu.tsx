@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Logo from "../../assets/ton-premier-saas/logo.png";
 import { Button } from "../ui/button";
-import Logo from "../../assets/semaine-2/logo.png";
 
 const Menu = () => (
   <div className="flex h-16 w-full items-center justify-between rounded-2xl bg-gray-900/30 p-4 backdrop-blur-xl">

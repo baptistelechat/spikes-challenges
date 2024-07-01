@@ -1,6 +1,6 @@
 "use client";
 
-import useStarInteractionStore from "@/lib/store/semaine-1/starInteraction.store";
+import useStarInteractionStore from "@/lib/store/5-etoiles/starInteraction.store";
 import { Star } from "lucide-react";
 
 interface IStarIconProps {
@@ -11,14 +11,14 @@ const StarIcon = (props: IStarIconProps) => {
   // Hovered star
   const hoveredStarNumber = useStarInteractionStore((s) => s.hoveredStarNumber);
   const setHoveredStarNumber = useStarInteractionStore(
-    (s) => s.setHoveredStarNumber,
+    (s) => s.setHoveredStarNumber
   );
   const selectedStarNumber = useStarInteractionStore(
-    (s) => s.selectedStarNumber,
+    (s) => s.selectedStarNumber
   );
   // Selected star
   const setSelectedStarNumber = useStarInteractionStore(
-    (s) => s.setSelectedStarNumber,
+    (s) => s.setSelectedStarNumber
   );
 
   const hover = props.index <= hoveredStarNumber;

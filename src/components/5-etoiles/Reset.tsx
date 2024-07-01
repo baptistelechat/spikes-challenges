@@ -1,6 +1,6 @@
 "use client";
 
-import useStarInteractionStore from "@/lib/store/semaine-1/starInteraction.store";
+import useStarInteractionStore from "@/lib/store/5-etoiles/starInteraction.store";
 import { Repeat } from "lucide-react";
 import { useState } from "react";
 
@@ -8,10 +8,10 @@ const Reset = () => {
   const [iconColor, setIconColor] = useState("#828282");
 
   const selectedStarNumber = useStarInteractionStore(
-    (s) => s.selectedStarNumber,
+    (s) => s.selectedStarNumber
   );
   const resetStartInteraction = useStarInteractionStore(
-    (s) => s.resetStarInteraction,
+    (s) => s.resetStarInteraction
   );
 
   const handleMouseEnter = () => {

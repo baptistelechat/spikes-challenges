@@ -5,14 +5,36 @@ const Page = () => {
   const currentWeek = 4; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
 
   // Générer les liens et titres dynamiquement
-  const links = Array.from({ length: currentWeek + 3 }, (_, index) => ({
-    href:
-      index + 1 === 2
-        ? "https://baptistelechat.vercel.app/"
-        : `/semaine-${index + 1}`,
-    text: `Semaine ${index + 1}`,
-    disabled: index + 1 > currentWeek,
-  }));
+  // const links = Array.from({ length: currentWeek + 3 }, (_, index) => ({
+  //   href:
+  //     index + 1 === 2
+  //       ? "https://baptistelechat.vercel.app/"
+  //       : `/semaine-${index + 1}`,
+  //   text: `Semaine ${index + 1}`,
+  //   disabled: index + 1 > currentWeek,
+  // }));
+
+  const links: {
+    href: string;
+    text: string;
+    disabled: boolean;
+  }[] = [
+    {
+      href: "5-etoiles",
+      text: "5 étoiles ?",
+      disabled: false,
+    },
+    {
+      href: "ton-premier-saas",
+      text: "Ton premier SaaS !",
+      disabled: false,
+    },
+    {
+      href: "une-belle-chaise",
+      text: "Une belle chaise !",
+      disabled: false,
+    },
+  ];
 
   return (
     <main className="flex h-screen w-screen flex-col items-center justify-center gap-2 bg-blue-100 backdrop-blur">

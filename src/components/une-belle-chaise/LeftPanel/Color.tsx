@@ -1,6 +1,6 @@
 "use client";
 
-import useThemeStore from "@/lib/store/semaine-4/themeStore";
+import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 
 const Color = () => {
   const theme = useThemeStore((s) => s.theme);

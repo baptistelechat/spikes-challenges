@@ -1,7 +1,7 @@
 "use client";
 
-import useCartStore from "@/lib/store/semaine-4/cartStore";
-import useThemeStore from "@/lib/store/semaine-4/themeStore";
+import useCartStore from "@/lib/store/une-belle-chaise/cartStore";
+import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";

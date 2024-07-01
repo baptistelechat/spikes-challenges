@@ -1,5 +1,5 @@
 "use client";
-import useThemeStore from "@/lib/store/semaine-4/themeStore";
+import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 import { Heart } from "lucide-react";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImg from "../../assets/semaine-2/header.png";
+import HeaderImg from "../../assets/ton-premier-saas/header.png";
 import { Button } from "../ui/button";
 
 const Header = () => (
