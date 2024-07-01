@@ -3,7 +3,7 @@ import { delaGothicOne } from "@/lib/constants/fonts";
 import avatarUrls from "@/lib/constants/sell/avatarUrls";
 import Input from "../Input";
 
-const CTA = () => {
+const Hero = () => {
   return (
     <div className="mt-10 flex flex-col items-center gap-10">
       <div className="w-fit rounded-full bg-gradient-to-r from-red-300 to-indigo-600 px-3 py-1.5 font-bold text-white">
@@ -39,4 +39,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default Hero;
