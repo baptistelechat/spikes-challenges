@@ -14,6 +14,10 @@ const links: {
     href: "une-belle-chaise",
     text: "Une belle chaise !",
   },
+  {
+    href: "sell",
+    text: "Sell (Hackathon)",
+  },
 ];
 
 export default links;
