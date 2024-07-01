@@ -7,7 +7,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Challenge Web",
+  title: "Spikes",
   description: "A list of challenge around web dev",
 };
 

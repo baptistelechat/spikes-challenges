@@ -1,11 +1,11 @@
-import GoHomeButton from "@/components/GoHomeButton";
 import Modal from "@/components/5-etoiles/Modal";
+import GoHomeButton from "@/components/GoHomeButton";
 import { Metadata } from "next";
 import backgroundImage from "../../assets/5-etoiles/background.png";
 
 export const metadata: Metadata = {
-  title: "Challenge Web | Semaine 1",
-  description: "Challenge web of first week",
+  title: "Spikes | 5 étoiles ?",
+  description: "Spikes | 5 étoiles ?",
 };
 
 const Page = () => (

@@ -5,8 +5,8 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Challenge Web",
-  description: "A list of challenge around web dev",
+  title: "Spikes Challenges",
+  description: "A list of challenge around web dev power by Spikes",
 };
 
 const RootLayout = ({

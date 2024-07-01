@@ -7,8 +7,8 @@ import Sponsor from "@/components/ton-premier-saas/Sponsor";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Challenge Web | Semaine 3",
-  description: "Challenge web of third week",
+  title: "Spikes | Ton premier SaaS !",
+  description: "Spikes | Ton premier SaaS !",
 };
 
 const Page = () => (

@@ -6,8 +6,8 @@ import RightPanel from "@/components/une-belle-chaise/RightPanel";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Challenge Web | Semaine 4",
-  description: "Challenge web of fourth week",
+  title: "Spikes | Une belle chaise !",
+  description: "Spikes | Une belle chaise !",
 };
 
 const Page = () => (

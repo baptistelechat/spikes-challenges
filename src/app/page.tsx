@@ -1,46 +1,13 @@
 import GradientHeading from "@/components/GradientHeading";
+import links from "@/lib/constants/links";
 import Link from "next/link";
 
 const Page = () => {
-  const currentWeek = 4; // Remplace cela par la semaine actuelle ou dynamiquement récupérée
-
-  // Générer les liens et titres dynamiquement
-  // const links = Array.from({ length: currentWeek + 3 }, (_, index) => ({
-  //   href:
-  //     index + 1 === 2
-  //       ? "https://baptistelechat.vercel.app/"
-  //       : `/semaine-${index + 1}`,
-  //   text: `Semaine ${index + 1}`,
-  //   disabled: index + 1 > currentWeek,
-  // }));
-
-  const links: {
-    href: string;
-    text: string;
-    disabled: boolean;
-  }[] = [
-    {
-      href: "5-etoiles",
-      text: "5 étoiles ?",
-      disabled: false,
-    },
-    {
-      href: "ton-premier-saas",
-      text: "Ton premier SaaS !",
-      disabled: false,
-    },
-    {
-      href: "une-belle-chaise",
-      text: "Une belle chaise !",
-      disabled: false,
-    },
-  ];
-
   return (
     <main className="flex h-screen w-screen flex-col items-center justify-center gap-2 bg-blue-100 backdrop-blur">
       <GradientHeading
         heading={1}
-        title="Challenge web"
+        title="Spikes"
         from="from-sky-400"
         to="to-indigo-700"
       />
@@ -48,12 +15,8 @@ const Page = () => {
         {links.map((link) => (
           <Link
             key={link.href.replace("/", "")}
-            href={!link.disabled ? link.href : "/"}
-            className={`w-fit rounded p-3 ${
-              !link.disabled
-                ? "bg-sky-300 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
-                : "cursor-not-allowed bg-gray-100"
-            } `}
+            href={link.href}
+            className="w-fit rounded bg-sky-300 p-3 transition-all duration-300 ease-in-out hover:-rotate-6 hover:scale-105 hover:text-white hover:underline"
           >
             {link.text}
           </Link>
