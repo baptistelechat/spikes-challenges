@@ -5,7 +5,7 @@ import Input from "../Input";
 
 const Hero = () => {
   return (
-    <div className="mt-10 flex flex-col items-center gap-10">
+    <div className="mt-10 flex w-1/2 flex-col items-center gap-10">
       <div className="w-fit rounded-full bg-gradient-to-r from-red-300 to-indigo-600 px-3 py-1.5 font-semibold text-white">
         Introducing a new online selling platform 🎉
       </div>
@@ -21,14 +21,16 @@ const Hero = () => {
           creators like you sell their digital products online.
         </p>
       </div>
+      <div className="w-2/3">
       <Input
         placeholder="Your best email address"
         action="Try it out"
         extraStyle="px-12"
       />
+      </div>
       <div className="flex items-center space-x-2">
         <div className="flex w-fit flex-row items-center justify-center">
-          <AnimatedTooltip items={avatarUrls} />
+          <AnimatedTooltip items={avatarUrls} numPeople="100"/>
         </div>
         <p className="text-zinc-500">
           <span className="font-bold text-black">More than 100+</span> users are

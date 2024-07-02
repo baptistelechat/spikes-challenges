@@ -1,14 +1,16 @@
+"use client";
+import Avatar from "@assets/avatar.png";
+import Logo from "@assets/sell/logo.svg";
 import Image from "next/image";
-import logo from "@assets/sell/logo.svg";
 
 const Footer = () => {
   const footerLinks = ["Home", "Agencies", "About", "My Shortlist"];
 
   return (
-    <div className="flex h-fit w-full justify-between">
+    <div className="flex h-fit w-2/3 justify-between">
       <div className="flex items-center justify-center gap-2 font-bold">
         <Image
-          src={logo}
+          src={Logo}
           height={16}
           width={16}
           alt="sell logo"
@@ -16,11 +18,27 @@ const Footer = () => {
         />
         Sell
       </div>
+      <div
+        className="group flex gap-2 p-2 font-semibold text-blue-600 hover:cursor-pointer hover:underline"
+        onClick={() =>
+          window.open("https://baptistelechat.vercel.app/", "_blank")
+        }
+      >
+        <Image
+          src={Avatar}
+          height={24}
+          width={24}
+          alt="sell logo"
+          className="rounded-full transition-all duration-300 ease-in-out group-hover:scale-125"
+          unoptimized
+        />
+        Created by @baptistelechat
+      </div>
       <div className="flex items-center justify-center gap-2">
         {footerLinks.map((link) => (
           <p
             key={link}
-            className="p-2 font-semibold  hover:cursor-pointer hover:underline"
+            className="p-2 font-semibold hover:cursor-pointer hover:underline"
           >
             {link}
           </p>

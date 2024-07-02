@@ -4,7 +4,7 @@ import logo from "@assets/sell/logo.svg";
 
 const Header = () => {
   return (
-    <div className="flex h-fit w-3/4 justify-between rounded-xl bg-zinc-800 px-2.5 py-1.5 text-white">
+    <div className="flex h-fit w-1/2 justify-between rounded-xl bg-zinc-800 px-2.5 py-1.5 text-white">
       <div className="flex items-center justify-center gap-2 font-bold">
         <Image src={logo} height={16} width={16} alt="sell logo" />
         Sell

@@ -11,6 +11,8 @@ import { useState } from "react";
 
 export const AnimatedTooltip = ({
   items,
+  numPeople,
+  noSpacing,
 }: {
   items: {
     id: number;
@@ -18,6 +20,8 @@ export const AnimatedTooltip = ({
     designation: string;
     image: string;
   }[];
+  numPeople: string;
+  noSpacing?: true;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
@@ -41,7 +45,7 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item, idx) => (
         <div
-          className="group relative z-0 -mr-4"
+          className={`${noSpacing ? "mr-2" : "-mr-4"} group relative z-0`}
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -87,8 +91,10 @@ export const AnimatedTooltip = ({
           />
         </div>
       ))}
-      <div className="z-50 flex size-11 items-center justify-center rounded-full border-2 border-white bg-violet-100 text-center text-xs font-bold text-blue-600 hover:cursor-pointer hover:bg-violet-200 dark:border-gray-800 dark:bg-white dark:text-black">
-        +100
+      <div
+        className={`${noSpacing ? "bg-gray-100 text-slate-900" : "bg-violet-100 text-blue-600"} z-50 flex size-11 items-center justify-center rounded-full border-2 border-white text-center text-xs font-bold`}
+      >
+        {numPeople}+
       </div>
     </>
   );
