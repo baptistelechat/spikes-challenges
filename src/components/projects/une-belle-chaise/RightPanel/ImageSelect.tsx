@@ -1,13 +1,13 @@
 "use client";
 import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
+import Image1 from "@assets/une-belle-chaise/01.jpeg";
+import Image2 from "@assets/une-belle-chaise/02.jpeg";
+import Image3 from "@assets/une-belle-chaise/03.jpeg";
+import Image4 from "@assets/une-belle-chaise/04.jpeg";
+import Image5 from "@assets/une-belle-chaise/05.png";
 import { Variants, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { Dispatch, SetStateAction, useEffect } from "react";
-import Image1 from "../../../assets/une-belle-chaise/01.jpeg";
-import Image2 from "../../../assets/une-belle-chaise/02.jpeg";
-import Image3 from "../../../assets/une-belle-chaise/03.jpeg";
-import Image4 from "../../../assets/une-belle-chaise/04.jpeg";
-import Image5 from "../../../assets/une-belle-chaise/05.png";
 interface IImageSelectProps {
   imageIndex: number;
   setImageIndex: Dispatch<SetStateAction<number>>;

@@ -1,7 +1,7 @@
-import Modal from "@/components/projects/5-etoiles/Modal";
 import GoHomeButton from "@/components/GoHomeButton";
+import Modal from "@/components/projects/5-etoiles/Modal";
+import backgroundImage from "@assets/5-etoiles/background.png";
 import { Metadata } from "next";
-import backgroundImage from "../../assets/5-etoiles/background.png";
 
 export const metadata: Metadata = {
   title: "Spikes | 5 étoiles ?",

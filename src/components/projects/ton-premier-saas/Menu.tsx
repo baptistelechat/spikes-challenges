@@ -1,5 +1,5 @@
+import Logo from "@assets/ton-premier-saas/logo.png";
 import Image from "next/image";
-import Logo from "../../assets/ton-premier-saas/logo.png";
 import { Button } from "../../ui/button";
 
 const Menu = () => (

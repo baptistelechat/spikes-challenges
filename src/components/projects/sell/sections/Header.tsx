@@ -1,6 +1,6 @@
 import { Twitter } from "lucide-react";
 import Image from "next/image";
-import logo from "../../../../assets/sell/logo.svg";
+import logo from "@assets/sell/logo.svg";
 
 const Header = () => {
   return (

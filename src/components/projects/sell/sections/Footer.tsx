@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../../assets/sell/logo.svg";
+import logo from "@assets/sell/logo.svg";
 
 const Footer = () => {
   const footerLinks = ["Home", "Agencies", "About", "My Shortlist"];

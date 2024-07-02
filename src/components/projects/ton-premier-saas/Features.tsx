@@ -1,8 +1,8 @@
+import FeaturesImage from "@assets/ton-premier-saas/features.png";
+import Icon1 from "@assets/ton-premier-saas/icon-1.png";
+import Icon2 from "@assets/ton-premier-saas/icon-2.png";
+import Icon3 from "@assets/ton-premier-saas/icon-3.png";
 import Image from "next/image";
-import FeaturesImage from "../../assets/ton-premier-saas/features.png";
-import Icon1 from "../../assets/ton-premier-saas/icon-1.png";
-import Icon2 from "../../assets/ton-premier-saas/icon-2.png";
-import Icon3 from "../../assets/ton-premier-saas/icon-3.png";
 import { Button } from "../../ui/button";
 import { Card, CardContent } from "../../ui/card";
 
