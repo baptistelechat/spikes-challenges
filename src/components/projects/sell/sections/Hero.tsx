@@ -1,4 +1,4 @@
-import AvatarCircles from "@/components/magicui/avatar-circles";
+import { AnimatedTooltip } from "@/components/aceternityUi/animated-tooltip";
 import { delaGothicOne } from "@/lib/constants/fonts";
 import avatarUrls from "@/lib/constants/sell/avatarUrls";
 import Input from "../Input";
@@ -6,7 +6,7 @@ import Input from "../Input";
 const Hero = () => {
   return (
     <div className="mt-10 flex flex-col items-center gap-10">
-      <div className="w-fit rounded-full bg-gradient-to-r from-red-300 to-indigo-600 px-3 py-1.5 font-bold text-white">
+      <div className="w-fit rounded-full bg-gradient-to-r from-red-300 to-indigo-600 px-3 py-1.5 font-semibold text-white">
         Introducing a new online selling platform 🎉
       </div>
       <div className="flex flex-col gap-5">
@@ -27,7 +27,9 @@ const Hero = () => {
         extraStyle="px-12"
       />
       <div className="flex items-center space-x-2">
-        <AvatarCircles numPeople={100} avatarUrls={avatarUrls} />
+        <div className="flex w-fit flex-row items-center justify-center">
+          <AnimatedTooltip items={avatarUrls} />
+        </div>
         <p className="text-zinc-500">
           <span className="font-bold text-black">More than 100+</span> users are
           selling their products
