@@ -1,6 +1,7 @@
 import GoHomeButton from "@/components/GoHomeButton";
 import CTA from "@/components/projects/sell/sections/CTA";
 import { Cards } from "@/components/projects/sell/sections/Cards";
+import Features from "@/components/projects/sell/sections/Features";
 import Footer from "@/components/projects/sell/sections/Footer";
 import Header from "@/components/projects/sell/sections/Header";
 import Hero from "@/components/projects/sell/sections/Hero";
@@ -21,6 +22,7 @@ const Page = () => (
       <Header />
       <Hero />
       <Cards />
+      <Features />
       <CTA />
       <Footer />
     </div>
