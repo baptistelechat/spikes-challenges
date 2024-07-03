@@ -1,4 +1,5 @@
 "use client";
+import openLink from "@/lib/utils/openLink";
 import Avatar from "@assets/avatar.png";
 import Logo from "@assets/sell/logo.svg";
 import Image from "next/image";
@@ -20,9 +21,7 @@ const Footer = () => {
       </div>
       <div
         className="group flex gap-2 p-2 font-semibold text-blue-600 hover:cursor-pointer hover:underline"
-        onClick={() =>
-          window.open("https://baptistelechat.vercel.app/", "_blank")
-        }
+        onClick={() => openLink("https://baptistelechat.vercel.app/")}
       >
         <Image
           src={Avatar}
@@ -39,6 +38,7 @@ const Footer = () => {
           <p
             key={link}
             className="p-2 font-semibold hover:cursor-pointer hover:underline"
+            onClick={() => openLink("https://baptistelechat.vercel.app/")}
           >
             {link}
           </p>

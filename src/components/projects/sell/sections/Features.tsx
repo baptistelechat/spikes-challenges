@@ -1,3 +1,4 @@
+"use client"
 import { delaGothicOne } from "@/lib/constants/fonts";
 import ArrowRight from "@assets/sell/arrow-right.svg";
 import Banknote from "@assets/sell/banknote.png";
@@ -6,6 +7,7 @@ import Globe from "@assets/sell/globe.png";
 import Heart from "@assets/sell/heart.png";
 import Image, { StaticImageData } from "next/image";
 import ManageYourStoreCard from "../ManageYourStoreCard";
+import openLink from "@/lib/utils/openLink";
 
 const Features = () => {
   const blocks: {
@@ -46,7 +48,10 @@ const Features = () => {
           <p className={`${delaGothicOne.className} text-3xl`}>Features</p>
           <div className="my-16 grid w-full grid-cols-2 gap-14">
             {blocks.map((block) => (
-              <div key={block.title} className="flex flex-col gap-2">
+              <div
+                key={block.title}
+                className="flex flex-col gap-2 rounded-lg p-4 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:drop-shadow-xl"
+              >
                 <Image
                   src={block.image}
                   width={50}
@@ -60,14 +65,17 @@ const Features = () => {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 top-0 mt-16 flex -translate-x-1/2 gap-3 rounded-xl bg-white px-7 py-3 drop-shadow-xl">
+      <div className="absolute right-0 top-0 mt-16 flex -translate-x-1/2 gap-3 rounded-xl bg-white px-7 py-3 drop-shadow-xl transition-all duration-300 ease-in-out hover:-rotate-2 hover:scale-105">
         <div className="flex flex-col justify-start ">
           <p className="text-lg font-bold text-blue-600">Try for free</p>
           <p className="text-sm font-semibold text-zinc-600">
             *No credit card required
           </p>
         </div>
-        <div className="flex size-14 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700">
+        <div
+          className="flex size-14 items-center justify-center rounded-full bg-blue-600 hover:cursor-pointer hover:bg-blue-700"
+          onClick={() => openLink("https://baptistelechat.vercel.app/")}
+        >
           <Image src={ArrowRight} width={16} height={10} alt="arrow right" />
         </div>
       </div>

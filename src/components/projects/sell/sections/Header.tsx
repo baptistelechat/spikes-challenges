@@ -1,3 +1,5 @@
+"use client"
+import openLink from "@/lib/utils/openLink";
 import logo from "@assets/sell/logo.svg";
 import { Twitter } from "lucide-react";
 import Image from "next/image";
@@ -9,7 +11,10 @@ const Header = () => {
         <Image src={logo} height={16} width={16} alt="sell logo" />
         Sell
       </div>
-      <div className="flex items-center justify-center gap-2">
+      <div
+        className="flex items-center justify-center gap-2 hover:cursor-pointer hover:underline"
+        onClick={() => openLink("https://x.com/baptiste_lechat")}
+      >
         <Twitter fill="white" size={20} />
         Follow us on Twitter
       </div>

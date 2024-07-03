@@ -30,7 +30,7 @@ const marquee = (
             height={16}
             width={16}
             alt="Arrow icon"
-            style={{ transform: "rotate(180deg)" }}
+            className="animate-bounce"
           />
         </div>
       </div>
@@ -46,7 +46,7 @@ const marquee = (
           height={16}
           width={16}
           alt="Arrow icon"
-          style={{ transform: "rotate(180deg)" }}
+          className="animate-bounce"
         />
       </div>
       <div className="flex flex-col items-end gap-2">
