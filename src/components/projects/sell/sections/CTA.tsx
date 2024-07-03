@@ -14,8 +14,6 @@ const CTA = () => {
           placeholder="Your best email address"
           action="Join waitlist"
           sendAction="Register"
-          toastSuccessMessage="Successfully register"
-          toastErrorMessage="Field is empty"
         />
       </div>
     </div>

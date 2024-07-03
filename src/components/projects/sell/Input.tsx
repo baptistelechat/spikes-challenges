@@ -2,24 +2,25 @@
 import { AnimatedSubscribeButton } from "@/components/projects/sell/magicui/animated-subscribe-button";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 import { useState } from "react";
+import { z } from "zod";
 
 interface IInput {
   placeholder: string;
   action: string;
   sendAction: string;
-  toastSuccessMessage: string;
-  toastErrorMessage: string;
   extraStyle?: string;
 }
 
-const Input = ({
-  placeholder,
-  action,
-  toastSuccessMessage,
-  toastErrorMessage,
-  extraStyle,
-}: IInput) => {
+const Input = ({ placeholder, action, extraStyle }: IInput) => {
   const [inputValue, setInputValue] = useState("");
+  const emailSchema = z.string().email();
+
+  const handleClick = () => {
+    const isEmail = emailSchema.safeParse(inputValue);
+    if (isEmail.success) {
+      setInputValue("");
+    }
+  };
 
   return (
     <div className={`${extraStyle} flex w-full items-center space-x-2`}>
@@ -30,14 +31,12 @@ const Input = ({
         value={inputValue}
         onChange={(e) => setInputValue(e.currentTarget.value)}
       />
-      <div onClick={() => setInputValue("")}>
+      <div onClick={handleClick}>
         <AnimatedSubscribeButton
           buttonColor="#2563eb"
           buttonHoverColor="#1d4ed8"
           buttonTextColor="#ffffff"
           subscribeStatus={false}
-          toastSuccessMessage={toastSuccessMessage}
-          toastErrorMessage={toastErrorMessage}
           inputValue={inputValue}
           initialText={
             <span className="group inline-flex items-center justify-center">

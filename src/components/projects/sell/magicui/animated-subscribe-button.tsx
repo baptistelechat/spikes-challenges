@@ -1,8 +1,8 @@
 "use client";
-
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { toast } from "sonner";
+import { z } from "zod";
 
 interface AnimatedSubscribeButtonProps {
   buttonColor: string;
@@ -11,9 +11,7 @@ interface AnimatedSubscribeButtonProps {
   subscribeStatus: boolean;
   initialText: React.ReactElement | string;
   changeText: React.ReactElement | string;
-  toastSuccessMessage: string;
-  toastErrorMessage: string;
-  inputValue?: string;
+  inputValue: string;
 }
 
 export const AnimatedSubscribeButton: React.FC<
@@ -25,22 +23,29 @@ export const AnimatedSubscribeButton: React.FC<
   subscribeStatus,
   initialText,
   changeText,
-  toastSuccessMessage,
-  toastErrorMessage,
   inputValue,
 }) => {
   const [isSubscribed, setIsSubscribed] = useState<boolean>(subscribeStatus);
   const [hover, setHover] = useState(false);
 
+  const emailSchema = z.string().email();
+
   const handleIsNotSubscribedClick = () => {
-    if (inputValue && inputValue.length > 0) {
+    const isEmail = emailSchema.safeParse(inputValue);
+
+    if (inputValue.length === 0) {
+      toast.error("Field is empty");
+      return;
+    }
+
+    if (isEmail.success) {
       setIsSubscribed(true);
-      toast.success(toastSuccessMessage);
+      toast.success("Successfully register");
       setTimeout(() => {
         setIsSubscribed(false);
       }, 4000);
     } else {
-      toast.error(toastErrorMessage);
+      toast.error("Invalid email address");
     }
   };
 

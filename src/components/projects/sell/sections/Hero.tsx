@@ -27,8 +27,6 @@ const Hero = () => {
           action="Try it out"
           extraStyle="px-12"
           sendAction="Register"
-          toastSuccessMessage="Successfully register"
-          toastErrorMessage="Field is empty"
         />
       </div>
       <div className="flex items-center space-x-2">
