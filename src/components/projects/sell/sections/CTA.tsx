@@ -1,6 +1,4 @@
-import { CardStack } from "@/components/aceternityUi/card-stack";
 import { delaGothicOne } from "@/lib/constants/fonts";
-import cardsData from "@/lib/constants/sell/cardsData";
 import Input from "../Input";
 
 const CTA = () => {
@@ -12,7 +10,13 @@ const CTA = () => {
         special offers, and more.
       </p>
       <div className="w-3/4">
-        <Input placeholder="Your best email address" action="Join waitlist" />
+        <Input
+          placeholder="Your best email address"
+          action="Join waitlist"
+          sendAction="Register"
+          toastSuccessMessage="Successfully register"
+          toastErrorMessage="Field is empty"
+        />
       </div>
     </div>
   );

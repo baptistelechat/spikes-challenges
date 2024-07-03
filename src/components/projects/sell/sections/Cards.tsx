@@ -1,5 +1,5 @@
 "use client";
-import { CardStack } from "@/components/aceternityUi/card-stack";
+import { CardStack } from "@/components/projects/sell/aceternityUi/card-stack";
 import cardsData from "@/lib/constants/sell/cardsData";
 
 export function Cards() {

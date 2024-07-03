@@ -1,4 +1,4 @@
-import { AnimatedTooltip } from "@/components/aceternityUi/animated-tooltip";
+import { AnimatedTooltip } from "@/components/projects/sell/aceternityUi/animated-tooltip";
 import { delaGothicOne } from "@/lib/constants/fonts";
 import avatarUrls from "@/lib/constants/sell/avatarUrls";
 import Input from "../Input";
@@ -22,15 +22,18 @@ const Hero = () => {
         </p>
       </div>
       <div className="w-2/3">
-      <Input
-        placeholder="Your best email address"
-        action="Try it out"
-        extraStyle="px-12"
-      />
+        <Input
+          placeholder="Your best email address"
+          action="Try it out"
+          extraStyle="px-12"
+          sendAction="Register"
+          toastSuccessMessage="Successfully register"
+          toastErrorMessage="Field is empty"
+        />
       </div>
       <div className="flex items-center space-x-2">
         <div className="flex w-fit flex-row items-center justify-center">
-          <AnimatedTooltip items={avatarUrls} numPeople="100"/>
+          <AnimatedTooltip items={avatarUrls} numPeople="100" />
         </div>
         <p className="text-zinc-500">
           <span className="font-bold text-black">More than 100+</span> users are

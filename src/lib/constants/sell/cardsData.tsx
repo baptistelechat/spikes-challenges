@@ -1,6 +1,6 @@
-import { AnimatedTooltip } from "@/components/aceternityUi/animated-tooltip";
-import GaugeCircle from "@/components/magicui/gauge-circle";
-import Marquee from "@/components/magicui/marquee";
+import { AnimatedTooltip } from "@/components/projects/sell/aceternityUi/animated-tooltip";
+import GaugeCircle from "@/components/projects/sell/magicui/gauge-circle";
+import Marquee from "@/components/projects/sell/magicui/marquee";
 import { Skeleton } from "@/components/ui/skeleton";
 import Card from "@/lib/types/sell/Card";
 import Image from "next/image";
@@ -70,7 +70,13 @@ const marquee = (
         </div>
         <div className="flex items-center gap-2">
           <p className="text-2xl font-bold">25k</p>
-          <Image src={Arrow} height={16} width={16} alt="Arrow icon" style={{transform: "rotate(180deg)"}}/>
+          <Image
+            src={Arrow}
+            height={16}
+            width={16}
+            alt="Arrow icon"
+            style={{ transform: "rotate(180deg)" }}
+          />
         </div>
       </div>
       <div className="flex w-fit flex-row items-center justify-center">
@@ -80,7 +86,13 @@ const marquee = (
     <div className="flex h-full w-96 flex-col items-start rounded-xl bg-white p-8">
       <div className="flex items-center gap-2">
         <p className="text-3xl font-bold">$ 7,283k</p>
-        <Image src={Arrow} height={16} width={16} alt="Arrow icon" style={{transform: "rotate(180deg)"}}/>
+        <Image
+          src={Arrow}
+          height={16}
+          width={16}
+          alt="Arrow icon"
+          style={{ transform: "rotate(180deg)" }}
+        />
       </div>
       <div className="flex flex-col items-end gap-2">
         <p className="rounded-t-lg rounded-bl-lg bg-gray-100 p-2 font-semibold text-black">
