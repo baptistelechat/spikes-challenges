@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import openLink from "@/lib/utils/openLink";
 import logo from "@assets/sell/logo.svg";
 import { Twitter } from "lucide-react";
@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="mt-6 flex h-fit w-1/2 justify-between rounded-xl bg-zinc-800 px-2.5 py-1.5 text-white">
+    <div className="mt-6 flex h-fit w-full justify-between rounded-xl bg-zinc-800 px-2.5 py-1.5 text-white sm:w-1/2">
       <div className="flex items-center justify-center gap-2 font-bold">
         <Image src={logo} height={16} width={16} alt="sell logo" />
         Sell

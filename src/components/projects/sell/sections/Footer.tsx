@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className="mb-6 flex h-fit w-2/3 justify-between">
-      <div className="flex items-center justify-center gap-2 font-bold">
+      <div className="hidden items-center justify-center gap-2 font-bold md:flex">
         <Image
           src={Logo}
           height={16}
@@ -28,12 +28,12 @@ const Footer = () => {
           height={24}
           width={24}
           alt="sell logo"
-          className="rounded-full transition-all duration-300 ease-in-out group-hover:scale-125"
+          className="hidden rounded-full transition-all duration-300 ease-in-out group-hover:scale-125 sm:block"
           unoptimized
         />
         Created by @baptistelechat
       </div>
-      <div className="flex items-center justify-center gap-2">
+      <div className="hidden items-center justify-center gap-2 lg:flex">
         {footerLinks.map((link) => (
           <p
             key={link}

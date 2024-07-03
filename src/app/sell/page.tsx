@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <div
-    className={`${dmSans.className} relative flex h-full flex-col items-center overflow-hidden bg-neutral-100`}
+    className={`${dmSans.className} relative flex h-full flex-col items-center overflow-hidden bg-neutral-100 px-6 sm:px-0`}
   >
     <div className="absolute top-0 z-0 size-[450px] -translate-y-1/2 translate-x-1/2 rounded-full bg-blue-300/50 blur-3xl"></div>
     <div className="absolute top-0 z-0 size-[600px] -translate-x-1/2 -translate-y-1/4 rounded-full bg-red-300/50 blur-3xl"></div>

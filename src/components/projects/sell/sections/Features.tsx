@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import { delaGothicOne } from "@/lib/constants/fonts";
+import openLink from "@/lib/utils/openLink";
 import ArrowRight from "@assets/sell/arrow-right.svg";
 import Banknote from "@assets/sell/banknote.png";
 import Box from "@assets/sell/box.png";
@@ -7,7 +8,6 @@ import Globe from "@assets/sell/globe.png";
 import Heart from "@assets/sell/heart.png";
 import Image, { StaticImageData } from "next/image";
 import ManageYourStoreCard from "../ManageYourStoreCard";
-import openLink from "@/lib/utils/openLink";
 
 const Features = () => {
   const blocks: {
@@ -43,10 +43,10 @@ const Features = () => {
 
   return (
     <div className="relative mt-16 flex w-full justify-center">
-      <div className="w-2/3">
-        <div className="w-3/4 justify-center">
+      <div className="w-full md:w-2/3">
+        <div className="w-full md:w-3/4">
           <p className={`${delaGothicOne.className} text-3xl`}>Features</p>
-          <div className="my-16 grid w-full grid-cols-2 gap-14">
+          <div className="my-16 flex w-full flex-col gap-4 md:grid md:grid-cols-2 md:gap-14">
             {blocks.map((block) => (
               <div
                 key={block.title}
@@ -65,7 +65,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 top-0 mt-16 flex -translate-x-1/2 gap-3 rounded-xl bg-white px-7 py-3 drop-shadow-xl transition-all duration-300 ease-in-out hover:-rotate-2 hover:scale-105">
+      <div className="absolute right-0 top-0 mt-16 hidden -translate-x-1/2 gap-3 rounded-xl bg-white px-7 py-3 drop-shadow-xl transition-all duration-300 ease-in-out hover:-rotate-2 hover:scale-105 lg:flex">
         <div className="flex flex-col justify-start ">
           <p className="text-lg font-bold text-blue-600">Try for free</p>
           <p className="text-sm font-semibold text-zinc-600">
@@ -79,7 +79,7 @@ const Features = () => {
           <Image src={ArrowRight} width={16} height={10} alt="arrow right" />
         </div>
       </div>
-      <ManageYourStoreCard className="absolute bottom-0 right-0 mb-16 translate-x-1/4 drop-shadow-xl transition-all duration-300 ease-in-out hover:-translate-x-1/4" />
+      <ManageYourStoreCard className="absolute bottom-0 right-0 mb-16 hidden translate-x-1/4 drop-shadow-xl transition-all duration-300 ease-in-out hover:-translate-x-1/4 lg:flex" />
     </div>
   );
 };

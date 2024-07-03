@@ -9,12 +9,12 @@ export const CardStack = ({
   items,
   offset,
   scaleFactor,
-  className
+  className,
 }: {
   items: Card[];
   offset?: number;
   scaleFactor?: number;
-  className?:string
+  className?: string;
 }) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
@@ -54,7 +54,9 @@ export const CardStack = ({
               opacity: 1 - index * OPACITY_FACTOR,
             }}
           >
-            <div className="size-full px-10 py-8">{card.content}</div>
+            <div className="size-full px-5 py-4 md:px-10 md:py-8">
+              {card.content}
+            </div>
           </motion.div>
         );
       })}

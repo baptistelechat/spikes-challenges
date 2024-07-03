@@ -23,15 +23,17 @@ const Input = ({ placeholder, action, extraStyle }: IInput) => {
   };
 
   return (
-    <div className={`${extraStyle} flex w-full items-center space-x-2`}>
+    <div
+      className={`${extraStyle} flex w-full flex-col items-center justify-center gap-2 xl:flex-row`}
+    >
       <input
         type="text"
         placeholder={placeholder}
-        className="flex-1 rounded-lg border bg-neutral-100 p-4 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none"
+        className="w-full flex-1 rounded-lg border bg-neutral-100 p-4 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none"
         value={inputValue}
         onChange={(e) => setInputValue(e.currentTarget.value)}
       />
-      <div onClick={handleClick}>
+      <div onClick={handleClick} className="w-full xl:w-fit">
         <AnimatedSubscribeButton
           buttonColor="#2563eb"
           buttonHoverColor="#1d4ed8"
