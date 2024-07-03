@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <div
-    className={`${dmSans.className} flex h-full flex-col items-center bg-neutral-100 p-6`}
+    className={`${dmSans.className} flex h-full flex-col items-center overflow-hidden bg-neutral-100`}
   >
     <div className="flex w-full max-w-screen-2xl flex-col items-center">
       <Header />

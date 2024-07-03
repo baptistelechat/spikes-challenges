@@ -7,7 +7,7 @@ const Footer = () => {
   const footerLinks = ["Home", "Agencies", "About", "My Shortlist"];
 
   return (
-    <div className="flex h-fit w-2/3 justify-between">
+    <div className="mb-6 flex h-fit w-2/3 justify-between">
       <div className="flex items-center justify-center gap-2 font-bold">
         <Image
           src={Logo}
