@@ -1,10 +1,10 @@
 "use client";
+import Image1 from "@assets/une-belle-chaise/01.jpeg";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import Image1 from "../../assets/une-belle-chaise/01.jpeg";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import ImageSelect from "./RightPanel/ImageSelect";
 
 const controlVariants: Variants = {

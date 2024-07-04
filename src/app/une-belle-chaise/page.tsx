@@ -1,8 +1,8 @@
 import GoHomeButton from "@/components/GoHomeButton";
+import LeftPanel from "@/components/projects/une-belle-chaise/LeftPanel";
+import Navbar from "@/components/projects/une-belle-chaise/NavBar/Navbar";
+import RightPanel from "@/components/projects/une-belle-chaise/RightPanel";
 import { Toaster } from "@/components/ui/sonner";
-import LeftPanel from "@/components/une-belle-chaise/LeftPanel";
-import Navbar from "@/components/une-belle-chaise/NavBar/Navbar";
-import RightPanel from "@/components/une-belle-chaise/RightPanel";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

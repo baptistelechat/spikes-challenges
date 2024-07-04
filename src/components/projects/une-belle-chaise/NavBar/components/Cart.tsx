@@ -9,10 +9,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import useCartStore from "@/lib/store/une-belle-chaise/cartStore";
 import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
+import Chair from "@assets/une-belle-chaise/01.jpeg";
 import { Variants, motion } from "framer-motion";
 import { PackageCheck, PackageX, ShoppingCart, Trash } from "lucide-react";
 import Image from "next/image";
-import Chair from "../../../../assets/une-belle-chaise/01.jpeg";
 
 const cartVariants: Variants = {
   hidden: {
