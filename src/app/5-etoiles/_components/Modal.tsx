@@ -4,12 +4,11 @@ import StarRating from "./StarRating";
 import Title from "./Title";
 
 const Modal = () => (
-  <div className="relative flex w-1/3 flex-col items-center gap-4 rounded bg-white p-6">
+  <div className="relative flex w-1/4 flex-col items-center gap-4 rounded-lg bg-white p-6">
     <Reset />
-    <Title content="How many stars would you give to them?" />
+    <Title content="Quel note donnerais-tu à ce challenges ?" />
     <Message
-      content="Jonah Noah delivered your order from Nanica Homemade Pies, today at 19:47 (7 min ahead schedule)."
-      highlight={["Nanica", "Homemade", "Pies,"]}
+      content="Bon j'espère que tu vas mettre 5 évidemment, si ce n'est pas le cas viens me dire pourquoi !"
     />
     <StarRating />
   </div>

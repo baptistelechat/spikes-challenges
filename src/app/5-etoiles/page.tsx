@@ -1,6 +1,5 @@
-import GoHomeButton from "@/components/GoHomeButton";
 import Modal from "@/app/5-etoiles/_components/Modal";
-import backgroundImage from "@assets/5-etoiles/background.png";
+import GoHomeButton from "@/components/GoHomeButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,10 +9,8 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <div
-    className="flex h-screen items-center justify-center bg-cover bg-center"
-    style={{
-      backgroundImage: `url(${backgroundImage.src})`,
-    }}
+    className=") flex h-screen items-center justify-center bg-[#7B61FF] bg-cover
+bg-center"
   >
     <GoHomeButton />
     <Modal />

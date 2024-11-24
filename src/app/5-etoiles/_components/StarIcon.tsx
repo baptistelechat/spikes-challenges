@@ -1,6 +1,7 @@
 "use client";
 
 import useStarInteractionStore from "@/lib/store/5-etoiles/starInteraction.store";
+import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 
 interface IStarIconProps {
@@ -69,9 +70,11 @@ const StarIcon = (props: IStarIconProps) => {
 
   return (
     <div
-      className={`flex size-12 items-center justify-center rounded-full ${
-        props.index === hoveredStarNumber ? "bg-primary-100" : ""
-      }`}
+      className={cn(
+        "flex size-12 items-center justify-center rounded-full",
+        props.index === hoveredStarNumber ? "bg-primary-100" : "",
+        selectedStarNumber > 0 ? "cursor-not-allowed" : ""
+      )}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
