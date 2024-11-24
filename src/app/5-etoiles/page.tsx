@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <div
-    className=") flex h-screen items-center justify-center bg-[#7B61FF] bg-cover
-bg-center"
+    className="flex h-screen items-center justify-center gap-2 bg-[#7B61FF]
+bg-cover bg-center p-6"
   >
     <GoHomeButton />
     <Modal />

@@ -1,3 +1,4 @@
+import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -15,7 +16,9 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => (
   <html lang="en">
-    <body className={montserrat.className}>{children}</body>
+    <TooltipProvider>
+      <body className={montserrat.className}>{children}</body>
+    </TooltipProvider>
   </html>
 );
 

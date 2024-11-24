@@ -9,17 +9,23 @@ interface IStarIconProps {
 }
 
 const StarIcon = (props: IStarIconProps) => {
-  // Hovered star
-  const hoveredStarNumber = useStarInteractionStore((s) => s.hoveredStarNumber);
-  const setHoveredStarNumber = useStarInteractionStore(
-    (s) => s.setHoveredStarNumber
-  );
   const selectedStarNumber = useStarInteractionStore(
     (s) => s.selectedStarNumber
   );
-  // Selected star
+  const hoveredStarNumber = useStarInteractionStore((s) => s.hoveredStarNumber);
+  const allNote = useStarInteractionStore((s) => s.allNote);
+
   const setSelectedStarNumber = useStarInteractionStore(
     (s) => s.setSelectedStarNumber
+  );
+  const setHoveredStarNumber = useStarInteractionStore(
+    (s) => s.setHoveredStarNumber
+  );
+  const setLastStarNumber = useStarInteractionStore(
+    (s) => s.setLastStarNumber
+  );
+  const setAllNote = useStarInteractionStore(
+    (s) => s.setAllNote
   );
 
   const hover = props.index <= hoveredStarNumber;
@@ -51,8 +57,21 @@ const StarIcon = (props: IStarIconProps) => {
 
   const handleClick = () => {
     if (selectedStarNumber === 0) {
-      setSelectedStarNumber(props.index);
+      const starNumber = props.index;
+      
+      setSelectedStarNumber(starNumber);
       setHoveredStarNumber(0);
+
+      const lastStarNumber = `${starNumber}_${new Date().getTime()}`
+      setLastStarNumber(lastStarNumber);
+
+      const newAllNote = `${lastStarNumber}|${allNote}`
+      setAllNote(newAllNote);
+
+      localStorage.setItem(
+        "starNumber",
+        newAllNote
+      );
     }
   };
 
