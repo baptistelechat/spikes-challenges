@@ -1,7 +1,7 @@
+import LeftPanel from "@/app/une-belle-chaise/_components/LeftPanel";
+import Navbar from "@/app/une-belle-chaise/_components/NavBar/Navbar";
+import RightPanel from "@/app/une-belle-chaise/_components/RightPanel";
 import GoHomeButton from "@/components/GoHomeButton";
-import LeftPanel from "@/components/projects/une-belle-chaise/LeftPanel";
-import Navbar from "@/components/projects/une-belle-chaise/NavBar/Navbar";
-import RightPanel from "@/components/projects/une-belle-chaise/RightPanel";
 import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
 

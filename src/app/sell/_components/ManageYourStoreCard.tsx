@@ -1,4 +1,4 @@
-import GaugeCircle from "@/components/projects/sell/magicui/gauge-circle";
+import GaugeCircle from "@/app/sell/_components/magicui/gauge-circle";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import Bag from "../../../assets/sell/bag.svg";
@@ -11,7 +11,7 @@ interface IManageYourStoreCardProps {
 const ManageYourStoreCard = ({ className }: IManageYourStoreCardProps) => {
   return (
     <div
-      className={`${className ? className+" h-fit" : "h-full"} flex w-96 flex-col items-center justify-center gap-4 rounded-xl bg-white p-8`}
+      className={`${className ? className + " h-fit" : "h-full"} flex w-96 flex-col items-center justify-center gap-4 rounded-xl bg-white p-8`}
     >
       <p className="font-semibold">Manage your store</p>
       <div className="flex w-full items-center justify-between">

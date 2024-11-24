@@ -1,4 +1,4 @@
-import { AnimatedTooltip } from "@/components/projects/sell/aceternityUi/animated-tooltip";
+import { AnimatedTooltip } from "@/app/sell/_components/aceternityUi/animated-tooltip";
 import { delaGothicOne } from "@/lib/constants/fonts";
 import avatarUrls from "@/lib/constants/sell/avatarUrls";
 import Input from "../Input";

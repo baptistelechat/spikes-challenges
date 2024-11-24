@@ -1,5 +1,5 @@
 "use client";
-import { AnimatedSubscribeButton } from "@/components/projects/sell/magicui/animated-subscribe-button";
+import { AnimatedSubscribeButton } from "@/app/sell/_components/magicui/animated-subscribe-button";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 import { useState } from "react";
 import { z } from "zod";

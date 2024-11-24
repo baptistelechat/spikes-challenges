@@ -1,6 +1,6 @@
 import Logo from "@assets/ton-premier-saas/logo.png";
 import Image from "next/image";
-import { Button } from "../../ui/button";
+import { Button } from "../../../components/ui/button";
 
 const Menu = () => (
   <div className="flex h-16 w-full items-center justify-between rounded-2xl bg-gray-900/30 p-4 backdrop-blur-xl">

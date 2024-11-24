@@ -5,7 +5,7 @@ import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Button } from "../../../ui/button";
+import { Button } from "../../../../components/ui/button";
 
 const AddToCart = () => {
   const [article, setArticle] = useState(1);

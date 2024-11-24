@@ -4,7 +4,7 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import { Button } from "../../ui/button";
+import { Button } from "../../../components/ui/button";
 import ImageSelect from "./RightPanel/ImageSelect";
 
 const controlVariants: Variants = {

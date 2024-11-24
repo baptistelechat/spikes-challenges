@@ -1,6 +1,6 @@
-import ManageYourStoreCard from "@/components/projects/sell/ManageYourStoreCard";
-import { AnimatedTooltip } from "@/components/projects/sell/aceternityUi/animated-tooltip";
-import Marquee from "@/components/projects/sell/magicui/marquee";
+import ManageYourStoreCard from "@/app/sell/_components/ManageYourStoreCard";
+import { AnimatedTooltip } from "@/app/sell/_components/aceternityUi/animated-tooltip";
+import Marquee from "@/app/sell/_components/magicui/marquee";
 import { Skeleton } from "@/components/ui/skeleton";
 import Card from "@/lib/types/sell/Card";
 import Image from "next/image";

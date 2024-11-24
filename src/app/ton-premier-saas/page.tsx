@@ -1,9 +1,9 @@
+import Features from "@/app/ton-premier-saas/_components/Features";
+import Footer from "@/app/ton-premier-saas/_components/Footer";
+import Header from "@/app/ton-premier-saas/_components/Header";
+import Menu from "@/app/ton-premier-saas/_components/Menu";
+import Sponsor from "@/app/ton-premier-saas/_components/Sponsor";
 import GoHomeButton from "@/components/GoHomeButton";
-import Features from "@/components/projects/ton-premier-saas/Features";
-import Footer from "@/components/projects/ton-premier-saas/Footer";
-import Header from "@/components/projects/ton-premier-saas/Header";
-import Menu from "@/components/projects/ton-premier-saas/Menu";
-import Sponsor from "@/components/projects/ton-premier-saas/Sponsor";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

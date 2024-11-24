@@ -1,10 +1,10 @@
+import CTA from "@/app/sell/_components/sections/CTA";
+import { Cards } from "@/app/sell/_components/sections/Cards";
+import Features from "@/app/sell/_components/sections/Features";
+import Footer from "@/app/sell/_components/sections/Footer";
+import Header from "@/app/sell/_components/sections/Header";
+import Hero from "@/app/sell/_components/sections/Hero";
 import GoHomeButton from "@/components/GoHomeButton";
-import CTA from "@/components/projects/sell/sections/CTA";
-import { Cards } from "@/components/projects/sell/sections/Cards";
-import Features from "@/components/projects/sell/sections/Features";
-import Footer from "@/components/projects/sell/sections/Footer";
-import Header from "@/components/projects/sell/sections/Header";
-import Hero from "@/components/projects/sell/sections/Hero";
 import { dmSans } from "@/lib/constants/fonts";
 import BackgroundGrid from "@assets/sell/background-grid.svg";
 import { Metadata } from "next";

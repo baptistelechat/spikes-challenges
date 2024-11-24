@@ -1,7 +1,7 @@
 "use client";
 import { Variants, motion } from "framer-motion";
 import { MoveLeft } from "lucide-react";
-import { Button } from "../../ui/button";
+import { Button } from "../../../components/ui/button";
 import AddToCart from "./LeftPanel/AddToCart";
 import AddToWishlist from "./LeftPanel/AddToWishlist";
 import Amount from "./LeftPanel/Amount";

@@ -1,5 +1,5 @@
 import GoHomeButton from "@/components/GoHomeButton";
-import Modal from "@/components/projects/5-etoiles/Modal";
+import Modal from "@/app/5-etoiles/_components/Modal";
 import backgroundImage from "@assets/5-etoiles/background.png";
 import { Metadata } from "next";
 
