@@ -14,17 +14,11 @@ type StarInteractionStoreType = {
   resetStarInteraction: () => void;
 };
 
-let lastStarNumber: string = "";
-const allNote = localStorage.getItem("starNumber");
-if (allNote) {
-  lastStarNumber = allNote.split("|")[0];
-}
-
 const useStarInteractionStore = create<StarInteractionStoreType>((set) => ({
   selectedStarNumber: 0,
   hoveredStarNumber: 0,
-  lastStarNumber,
-  allNote: allNote ?? "",
+  lastStarNumber: "",
+  allNote: "",
   setSelectedStarNumber: (newSelectedStarNumber: number) => {
     set({
       selectedStarNumber: newSelectedStarNumber,
