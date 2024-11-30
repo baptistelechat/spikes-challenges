@@ -11,11 +11,10 @@ import useCartStore from "@/lib/store/une-belle-chaise/cartStore";
 import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 import Chair from "@assets/une-belle-chaise/01.jpeg";
 import { Variants, motion } from "framer-motion";
-import { PackageCheck, PackageX, ShoppingCart, Trash } from "lucide-react";
+import { Heart, PackageX, Trash } from "lucide-react";
 import Image from "next/image";
-import { toast } from "sonner";
 
-const cartVariants: Variants = {
+const wishlistVariants: Variants = {
   hidden: {
     x: 150,
     opacity: 0,
@@ -29,9 +28,9 @@ const cartVariants: Variants = {
   },
 };
 
-const Cart = () => {
-  const cart = useCartStore((s) => s.cart);
-  const resetCart = useCartStore((s) => s.resetCart);
+const Wishlist = () => {
+  const wishlist = useCartStore((s) => s.wishlist);
+  const resetWishlist = useCartStore((s) => s.resetWishlist);
 
   const theme = useThemeStore((s) => s.theme);
 
@@ -40,19 +39,24 @@ const Cart = () => {
       <HoverCardTrigger>
         <motion.div
           className="flex flex-col items-center gap-1"
-          variants={cartVariants}
+          variants={wishlistVariants}
           initial="hidden"
           animate="visible"
         >
-          <ShoppingCart className="size-6" />
-          <Badge className="w-8 place-content-center">{cart}</Badge>
+          <Heart
+            className="size-6"
+            fill="black"
+            color="black"
+            fillOpacity={wishlist ? 1 : 0}
+          />
+          <Badge className="w-8 place-content-center">{wishlist ? 1 : 0}</Badge>
         </motion.div>
       </HoverCardTrigger>
       <HoverCardContent className="mr-2 ">
-        {cart === 0 ? (
+        {!wishlist ? (
           <div className="flex items-center justify-center gap-4">
             <PackageX className="size-6" />
-            <p className="font-semibold">Cart is empty</p>
+            <p className="font-semibold">Wishlist is empty</p>
           </div>
         ) : (
           <motion.div
@@ -63,7 +67,7 @@ const Cart = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <p className="font-semibold">Cart</p>
+            <p className="font-semibold">Whishlist</p>
             <Separator />
             <div className="flex flex-col gap-2">
               <Image
@@ -81,32 +85,16 @@ const Cart = () => {
                 <p className="font-semibold text-zinc-400">
                   Meryl Lounge Chair
                 </p>
-                <div className="flex flex-col gap-1">
-                  <p className="text-zinc-400">
-                    {cart} x $149.99 (${(cart * 149.99).toFixed(2)})
-                  </p>
-                  <Separator />
-                  <p className="font-semibold">${(cart * 149.99).toFixed(2)}</p>
-                </div>
+
+                <Button
+                  variant="link"
+                  className="flex gap-2"
+                  onClick={() => resetWishlist()}
+                >
+                  <Trash className="size-4" />
+                  Empty the wishlist
+                </Button>
               </div>
-              <div
-                className="flex h-12 items-center justify-center gap-2 rounded  px-10 py-4 transition-all duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
-                style={{
-                  backgroundColor: theme,
-                }}
-                onClick={() => toast("Work in progress 🚧")}
-              >
-                <PackageCheck className="size-6" color="white" />
-                <p className="font-semibold text-white">Buy now</p>
-              </div>
-              <Button
-                variant="link"
-                className="flex gap-2"
-                onClick={() => resetCart()}
-              >
-                <Trash className="size-4" />
-                Empty the cart
-              </Button>
             </div>
           </motion.div>
         )}
@@ -115,4 +103,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Wishlist;

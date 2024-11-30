@@ -2,6 +2,7 @@ import Cart from "./components/Cart";
 import Icons from "./components/Icons";
 import Logo from "./components/Logo";
 import PagesLink from "./components/PagesLink";
+import Wishlist from "./components/Whishlist";
 
 const Navbar = () => {
   return (
@@ -11,6 +12,7 @@ const Navbar = () => {
       <div className="flex items-center gap-10">
         <Icons />
         <div className="h-20 border-l border-zinc-300"></div>
+        <Wishlist/>
         <Cart />
       </div>
     </div>

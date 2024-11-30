@@ -6,6 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import ImageSelect from "./RightPanel/ImageSelect";
+import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 
 const controlVariants: Variants = {
   hidden: {
@@ -36,6 +37,8 @@ const imageVariants: Variants = {
 };
 
 const RightPanel = () => {
+  const theme = useThemeStore((s) => s.theme);
+
   const [imageIndex, setImageIndex] = useState<number>(0);
   const [image, setImage] = useState<StaticImageData>(Image1);
   const [direction, setDirection] = useState<"left" | "right">("left");
@@ -71,7 +74,7 @@ const RightPanel = () => {
         animate="visible"
       >
         <div className="flex gap-2">
-          <p className="text-3xl font-bold">
+          <p className="text-3xl font-bold" style={{color:theme}}>
             {String(imageIndex + 1).padStart(2, "0")}
           </p>
           <p className="flex items-end text-3xl font-bold text-zinc-400">/</p>

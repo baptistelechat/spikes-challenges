@@ -1,19 +1,15 @@
 "use client";
+import useCartStore from "@/lib/store/une-belle-chaise/cartStore";
 import useThemeStore from "@/lib/store/une-belle-chaise/themeStore";
 import { Heart } from "lucide-react";
-import { useState } from "react";
 
 const AddToWishlist = () => {
   const theme = useThemeStore((s) => s.theme);
-  const [fillOpacity, setFillOpacity] = useState(0);
+  const wishlist = useCartStore((s) => s.wishlist);
+  const setWishlist = useCartStore((s) => s.setWishlist);
 
   const handleClick = () => {
-    if (!fillOpacity) {
-      setFillOpacity(1);
-    }
-    if (fillOpacity) {
-      setFillOpacity(0);
-    }
+    setWishlist(!wishlist);
   };
 
   return (
@@ -25,7 +21,7 @@ const AddToWishlist = () => {
         className="size-6 "
         color={theme}
         fill={theme}
-        fillOpacity={fillOpacity}
+        fillOpacity={wishlist ? 1 : 0}
       />
       <p className="font-semibold" style={{ color: theme }}>
         Add to Wishlist

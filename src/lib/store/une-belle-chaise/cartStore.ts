@@ -4,6 +4,9 @@ type CartStoreType = {
   cart: number;
   setCart: (newCart: number) => void;
   resetCart: () => void;
+  wishlist: boolean;
+  setWishlist: (newWishlist: boolean) => void;
+  resetWishlist: () => void;
 };
 
 const useCartStore = create<CartStoreType>((set) => ({
@@ -13,9 +16,18 @@ const useCartStore = create<CartStoreType>((set) => ({
       cart: newCart,
     });
   },
-
   resetCart: () => {
     set({ cart: 0 });
+  },
+  
+  wishlist: false,
+  setWishlist: (newWishlist: boolean) => {
+    set({
+      wishlist: newWishlist,
+    });
+  },
+  resetWishlist: () => {
+    set({ wishlist: false });
   },
 }));
 
